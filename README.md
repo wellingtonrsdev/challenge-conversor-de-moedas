@@ -10,15 +10,17 @@ A aplicação permite ao usuário converter valores entre diferentes moedas de f
 ## 🎯 Funcionalidades
 
 ✅ Consulta de taxas de câmbio ao vivo
+
 ✅ Conversão entre múltiplas moedas:
 
-USD ⇄ ARS (Peso Argentino)
+-  USD ⇄ ARS (Peso Argentino)
 
-USD ⇄ BRL (Real Brasileiro)
+- USD ⇄ BRL (Real Brasileiro)
 
-USD ⇄ COP (Peso Colombiano)
+- USD ⇄ COP (Peso Colombiano)
 
 ✅ Interface amigável em modo texto
+
 ✅ Código limpo, organizado e orientado a objetos
 
 ## 🚀 Tecnologias Utilizadas
