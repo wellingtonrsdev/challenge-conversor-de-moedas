@@ -1,6 +1,7 @@
 package entities;
 
 import com.google.gson.Gson;
+import io.github.cdimascio.dotenv.Dotenv;
 
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -10,11 +11,14 @@ import java.net.http.HttpResponse;
 public class ExchangeRateClient {
 
     private static final String BASE_URL = "https://v6.exchangerate-api.com/v6/";
-    private static final String API_KEY = "REMOVIDO";
+
+    static Dotenv dotenv = Dotenv.load();
+
+    static String apiKey = dotenv.get("EXCHANGE_RATE_API_KEY");
 
     public static ExchangeRateResponse convertExchangeRate(String from, String to, double amount) {
 
-        URI address = URI.create(BASE_URL + API_KEY + "/pair/" + from + "/" + to + "/" + amount);
+        URI address = URI.create(BASE_URL + apiKey + "/pair/" + from + "/" + to + "/" + amount);
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(address)
